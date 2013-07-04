@@ -6,7 +6,7 @@ app.get('/', function(request, response) {
     var fs = require('fs');
     var filename = 'index.html';
     var content = fs.readFileSync(filename);
-    response.send(content);
+    response.send(content.toString());
 });
 
 var port = process.env.PORT || 5000;
